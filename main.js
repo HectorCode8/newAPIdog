@@ -1,8 +1,6 @@
 
 const API_URL = 'https://api.thedogapi.com/v1/images/search?limit=3'
 
-
-
 async function reload() {
     const res = await fetch(API_URL)
     const data = await res.json()
