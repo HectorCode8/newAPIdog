@@ -1,5 +1,5 @@
 
-const API_URL = 'https://api.thedogapi.com/v1/images/search?limit=3'
+const API_URL = 'https://api.thedogapi.com/v1/images/search?limit=3&api_key=67f4aec6-1e09-4a9c-b45f-1228ac4de068'
 
 async function reload() {
     const res = await fetch(API_URL)
