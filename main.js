@@ -1,6 +1,6 @@
 
 const API_URL_RANDOM = 'https://api.thedogapi.com/v1/images/search?limit=2&api_key=67f4aec6-1e09-4a9c-b45f-1228ac4de068'
-const API_URL_FAVORITES = 'https://api.thedogapi.com/v1/favourites?limit=2&api_key=67f4aec6-1e09-4a9c-b45f-1228ac4de068'
+const API_URL_FAVORITES = 'https://api.thedogapi.com/v1/favourites?api_key=67f4aec6-1e09-4a9c-b45f-1228ac4de068'
 
 const spanError = document.getElementById('error')
 
@@ -24,11 +24,28 @@ async function loadRandomDog() {
 async function loadFavoritesDog() {
     const res = await fetch(API_URL_FAVORITES)
     const data = await res.json()
+    console.log('Favoritos')
+    console.log(data)
     if(res.status !== 200) {
         spanError.innerHTML = 'Hubo un error: ' + res.status
     }
     
 }
 
+async function saveFovoriteDog() {
+    const res = await fetch(API_URL_FAVORITES, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        }, 
+        body: JSON.stringify({
+            image_id: 'dje'
+        })
+
+
+    })
+}
+
 loadRandomDog()
 loadFavoritesDog()
+saveFovoriteDog()

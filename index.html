@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perros Aleatorios</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Perros APP</h1>
 
     <span id="error"></span>
 
-
     <section id="randomDog">
-        <h2>Perros Aleatorios</h2>
+      <h2>Perros Aleatorios</h2>
 
-       
-        <article>
-            <img id="img1" width="300" alt="Perros Aleatorios">
-            <button>Guardar Perro en FAVORITOS  </button>
-        </article>
+      <article>
+        <img id="img1" width="300" alt="Perros Aleatorios" />
+        <button id="btn1" onclick="saveFovoriteDog()">
+          Guardar Perro en FAVORITOS
+        </button>
+      </article>
 
-        <article>
-            <img id="img2" width="300" alt="Perros Aleatorios">
-            <button>Guardar Perro en FAVORITOS  </button>
-        </article>
+      <article>
+        <img id="img2" width="300" alt="Perros Aleatorios" />
+        <button id="btn2" onclick="saveFovoriteDog()">
+          Guardar Perro en FAVORITOS
+        </button>
+      </article>
 
-        <button onclick="loadRandomDog()">Recargar</button>
+      <button onclick="loadRandomDog()">Recargar</button>
     </section>
 
     <section id="favoritesDog">
-        <h2>Perros FAVORITOS</h2>
-        <article>
-            <img id="img1" width="300" alt="Perros Aleatorios">
-            <button>Sacar al Perro de FAVORITOS  </button>
-        </article>
+      <h2>Perros FAVORITOS</h2>
+      <article>
+        <img id="img1" width="300" alt="Perros Aleatorios" />
+        <button>Sacar al Perro de FAVORITOS</button>
+      </article>
     </section>
-   
+
     <script src="./main.js"></script>
-</body>
+  </body>
 </html>
